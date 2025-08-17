@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetScanIA</title>
+    <link rel="icon" href="/vite.svg" />
+  </head>
+  <body>
+    <main style="max-width:720px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial">
+      <h1>PetScanIA</h1>
+      <p id="status">Listo para probar conexión.</p>
+
+      <section style="margin-top:12px;">
+        <button id="btnHealth">Probar /health</button>
+      </section>
+
+      <section style="margin-top:16px;">
+        <input type="file" id="file" accept="image/*" />
+        <button id="btnPredict">Enviar a /predecir</button>
+      </section>
+
+      <pre id="out" style="margin-top:16px;white-space:pre-wrap;background:#f6f6f6;padding:12px;border-radius:8px;"></pre>
+    </main>
+
+    <!-- Importa la lógica del frontend -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
