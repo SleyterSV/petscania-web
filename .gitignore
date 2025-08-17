@@ -6,20 +6,25 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.eslintcache
 
 # Build output
 dist/
 dist-ssr/
-*.local
+*.local    # Ojo: ignora cualquier archivo que termine en .local (útil si usas configs locales)
 
 # Dependencies
 node_modules/
 
+# Pack artifacts
+*.tgz
+
 # Env files (mantén solo la plantilla)
 .env
 .env.*
-.env.local
 !.env.example
+# Redundante pero permitido si te gusta verlo explícito:
+.env.local
 
 # Editor / OS
 .vscode/*
@@ -32,10 +37,19 @@ Thumbs.db
 coverage/
 .nyc_output/
 
-# Otros
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# TypeScript (si usas TS)
+*.tsbuildinfo
 
+# PNPM (si usas pnpm)
+.pnpm-store/
+
+# Cypress (si usas)
+cypress/screenshots/
+cypress/videos/
+
+# Vercel (si usas)
+.vercel/
+
+# Supabase CLI (solo si lo usas en este repo)
+.supabase/
+supabase/.temp/
